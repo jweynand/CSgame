@@ -5,10 +5,12 @@ x = x + hmovement;
 y = y + vmovement;
 
 
-if place_meeting(x,y,obj_Enemy){
-	with (obj_Enemy.id) {
-		instance_destroy();
-	}
+// This might be useful code later
+
+// if place_meeting(x,y,obj_Enemy){
+//	with (obj_Enemy.id) {
+//		instance_destroy();
+//	}
 	
-	instance_destroy();
-}
+//	instance_destroy();
+//}

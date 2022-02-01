@@ -14,13 +14,15 @@ invincible = false;
 invincibleTime = 60;
 
 global.coins = 0;
+totalScore = 0;
 
 switchSpell = false;
 activeSpell = "Fireball";
+aim = "up";
 
 instance_create_depth(x,y,0,hud_ActiveSpell);
 
 hudTimer = 60;
 
-if room == Room1 {global.grav = true;}
-if room == Room2 {global.grav = false;}
+if room == rm_Test0 {global.grav = true;}
+if room == rm_Test1 {global.grav = false;}

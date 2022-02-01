@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-x = x + hmovement;
-y = y + vmovement;
+instance_destroy(other);
+obj_Player.totalScore = +100;
+instance_destroy();

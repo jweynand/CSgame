@@ -1,5 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = x + hmovement;
-y = y + vmovement;
+draw_text(x,y-60,enemyHp);

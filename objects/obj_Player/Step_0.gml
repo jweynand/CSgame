@@ -11,7 +11,12 @@ magic = keyboard_check_pressed(ord("C"));
 switchSpell = keyboard_check_pressed(ord("X"));
 roomwarp = keyboard_check_pressed(vk_enter);
 
-if roomwarp {room = Room2;}
+if roomwarp {room = rm_Test1;}
+
+// Debug Reboot
+if keyboard_check(ord("R")) and (ord("B")){
+	room = rm_TitlePage;
+}
 
 // Horizontal Movement
 xDirection = right - left;
@@ -83,6 +88,7 @@ if hp <= 0 {
 
 if place_meeting(x,y,obj_Coin){
 	global.coins ++;
+	totalScore = totalScore + 50;
 }
 
 // Cast A Spell
