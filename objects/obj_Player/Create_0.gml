@@ -19,6 +19,7 @@ totalScore = 0;
 switchSpell = false;
 activeSpell = "Fireball";
 aim = "up";
+spellList = ["none", "Fireball", "Laser"];
 
 instance_create_depth(x,y,0,hud_ActiveSpell);
 

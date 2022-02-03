@@ -11,7 +11,7 @@ magic = keyboard_check_pressed(ord("C"));
 switchSpell = keyboard_check_pressed(ord("X"));
 roomwarp = keyboard_check_pressed(vk_enter);
 
-if roomwarp {room = rm_Test1;}
+if roomwarp {TransitionStart(rm_Test1,sq_FadeIn,sq_FadeOut);}
 
 // Debug Reboot
 if keyboard_check(ord("R")) and (ord("B")){
@@ -59,6 +59,34 @@ else {
 // Jump
 if place_meeting(x,y+1,obj_Grass) and jump {
 	yVector = jumpForce;
+}
+
+// Change sprite to walk in the right direction
+if left{
+	sprite_index = spr_WalkLeft;
+}
+if right{
+	sprite_index = spr_WalkRight;
+}
+if down{
+	sprite_index = spr_WalkDown;
+}
+if up{
+	sprite_index = spr_WalkUp;
+}
+
+// Switch to Standing Sprite when not holding movement key
+if sprite_index == spr_WalkLeft and not left {
+	sprite_index = spr_StandLeft;
+}
+if sprite_index == spr_WalkRight and not right {
+	sprite_index = spr_StandRight;
+}
+if sprite_index == spr_WalkDown and not down {
+	sprite_index = spr_StandDown;
+}
+if sprite_index == spr_WalkUp and not up {
+	sprite_index = spr_StandUp;
 }
 
 // Check if you're touching an enemy (just a useful variable)
