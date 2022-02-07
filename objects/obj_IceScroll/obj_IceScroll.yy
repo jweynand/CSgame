@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_FireScroll",
-    "path": "sprites/spr_FireScroll/spr_FireScroll.yy",
+    "name": "spr_IceScroll",
+    "path": "sprites/spr_IceScroll/spr_IceScroll.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,7 +30,7 @@
     "path": "folders/Objects/SpellScrolls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_FireScroll",
+  "name": "obj_IceScroll",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -13,13 +13,12 @@ hp = 3;
 invincible = false;
 invincibleTime = 60;
 
-global.coins = 0;
-totalScore = 0;
-
 switchSpell = false;
-activeSpell = "Fireball";
+activeSpell = "none";
+spellNumber = 0;
+totalSpells = 0;
 aim = "up";
-spellList = ["none", "Fireball", "Laser"];
+spellList = ["none"];
 
 instance_create_depth(x,y,0,hud_ActiveSpell);
 

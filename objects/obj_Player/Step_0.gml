@@ -116,26 +116,30 @@ if hp <= 0 {
 
 if place_meeting(x,y,obj_Coin){
 	global.coins ++;
-	totalScore = totalScore + 50;
+	global.score += 50;
 }
 
 // Cast A Spell
 if magic {
 	if activeSpell == "Fireball" {
-	instance_create_depth(x,y,0,obj_Fireball);
+		instance_create_depth(x,y,0,obj_Fireball);
 	}
-	if activeSpell == "Laser"
-	instance_create_depth(x,y,0,obj_Laser);
+	if activeSpell == "Laser"{
+		instance_create_depth(x,y,0,obj_Laser);
+	}
+	if activeSpell == "Ice"{
+		instance_create_depth(x,y,0,obj_Ice);
+	}
 }
 
-// Switch Your Active Spell
-if switchSpell {
-	if activeSpell = "Fireball" {
-		activeSpell = "Laser"
-	}
-	else {
-	activeSpell = "Fireball";
-	}
+// Cycle through all of your collected spells
+if switchSpell and spellNumber <= totalSpells and totalSpells > 0{	
+	spellNumber += 1;
+	activeSpell = spellList [spellNumber];
+}
+
+if spellNumber = totalSpells{
+	spellNumber = 0;
 }
 
 // Aim the spells

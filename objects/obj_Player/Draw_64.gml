@@ -1,7 +1,7 @@
 /// @description HUD
 // You can write your code in this editor
 
-draw_text(1250,6,"Score: " + string(totalScore));
+draw_text(1250,6,"Score: " + string(global.score));
 
 if !(left or right or down or up or jump){
 	hudTimer --;

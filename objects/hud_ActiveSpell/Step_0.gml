@@ -10,4 +10,7 @@ if obj_Player.switchSpell{
 	else if obj_Player.activeSpell == "Laser" {
 		sprite_index  = spr_LaserR;
 	}
+	else if obj_Player.activeSpell == "Ice" {
+		sprite_index  = spr_Ice;
+	}
 }
