@@ -133,12 +133,12 @@ if magic {
 }
 
 // Cycle through all of your collected spells
-if switchSpell and spellNumber <= totalSpells and totalSpells > 0{	
+if switchSpell and spellNumber <= global.totalSpells and global.totalSpells > 0{	
 	spellNumber += 1;
-	activeSpell = spellList [spellNumber];
+	activeSpell = global.spellList [spellNumber];
 }
 
-if spellNumber = totalSpells{
+if spellNumber = global.totalSpells{
 	spellNumber = 0;
 }
 

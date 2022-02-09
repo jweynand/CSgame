@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-array_insert(obj_Player.spellList, 1, "Laser");
-obj_Player.totalSpells += 1;
+array_insert(global.spellList, 1, "Laser");
+global.totalSpells += 1;
 instance_destroy();

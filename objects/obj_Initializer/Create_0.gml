@@ -1,6 +1,6 @@
-/// @description Insert description here
+/// @description Define some global variables
 // You can write your code in this editor
 global.coins = 0;
 global.score = 0;
-
-// try and make your collected spells a global variable
+global.spellList = ["none"];
+global.totalSpells = 0;
