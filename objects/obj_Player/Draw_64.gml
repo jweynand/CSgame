@@ -1,8 +1,10 @@
 /// @description HUD
 // You can write your code in this editor
 
+draw_set_font(ft_Fancy);
 draw_text(1250,6,"Score: " + string(global.score));
 draw_text(650,22,"Spell: ");
+instance_create_depth(2,6,0,hud_HealthBar);
 
 if !(left or right or down or up or jump){
 	hudTimer --;

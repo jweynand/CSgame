@@ -7,5 +7,13 @@ else{playerHealth = "spr_hp" + string(obj_Player.hp);}
 
 // Change Sprite to correct amount of health
 
-show_debug_message(playerHealth);
-sprite_index = string(playerHealth);
+//show_debug_message(playerHealth);
+//sprite_index = spr_hp0 + string(obj_Player.hp);
+
+// Maybe improve this at some point
+if obj_Player.hp == 0 {sprite_index = spr_hp00;}
+if obj_Player.hp == 1 {sprite_index = spr_hp01;}
+if obj_Player.hp == 2 {sprite_index = spr_hp02;}
+if obj_Player.hp == 3 {sprite_index = spr_hp03;}
+if obj_Player.hp == 4 {sprite_index = spr_hp04;}
+if obj_Player.hp == 5 {sprite_index = spr_hp05;}
