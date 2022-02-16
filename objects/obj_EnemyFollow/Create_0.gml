@@ -7,3 +7,6 @@ xSpeed = 2;
 ySpeed = 2;
 yVector = 0;
 grv = -0.4;
+
+stunned = false;
+stunTimer = 2;

@@ -22,3 +22,12 @@ if not global.grav{
 		y = y - 1;
 	}
 }
+
+if stunned {
+	stunTimer -= 1/room_speed
+	if stunTimer <0 {
+		stunTimer = 2;
+		stunned = false;
+		xSpeed = 2;
+	}
+}

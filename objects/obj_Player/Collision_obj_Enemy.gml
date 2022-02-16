@@ -3,10 +3,11 @@
 // Detect when hitting the top of the enemy
 if y <= other.y - other.sprite_height * 0.9 {
 	// Bounce
-	yVector = jumpForce;
+	yVector = jumpForce/2;
 	other.enemyHp --;
 }
 
 else{
 	PlayerDamaged(1);
+	x = x - xVector*5;
 }
