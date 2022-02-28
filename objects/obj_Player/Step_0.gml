@@ -62,32 +62,7 @@ if place_meeting(x,y+1,obj_Grass) and jump {
 }
 
 // Change sprite to walk in the right direction
-if left{
-	sprite_index = spr_WalkLeft;
-}
-if right{
-	sprite_index = spr_WalkRight;
-}
-if down{
-	sprite_index = spr_WalkDown;
-}
-if up{
-	sprite_index = spr_WalkUp;
-}
-
-// Switch to Standing Sprite when not holding movement key
-if sprite_index == spr_WalkLeft and not left {
-	sprite_index = spr_StandLeft;
-}
-if sprite_index == spr_WalkRight and not right {
-	sprite_index = spr_StandRight;
-}
-if sprite_index == spr_WalkDown and not down {
-	sprite_index = spr_StandDown;
-}
-if sprite_index == spr_WalkUp and not up {
-	sprite_index = spr_StandUp;
-}
+updatePlayerSprite();
 
 // Check if you're touching an enemy (just a useful variable)
 if place_meeting(x,y,obj_Enemy){
@@ -121,26 +96,13 @@ if place_meeting(x,y,obj_Coin){
 
 // Cast A Spell
 if magic {
-	if activeSpell == "Fireball" {
-		instance_create_depth(x,y,0,obj_Fireball);
-	}
-	if activeSpell == "Laser"{
-		instance_create_depth(x,y,0,obj_Laser);
-	}
-	if activeSpell == "Ice"{
-		instance_create_depth(x,y,0,obj_Ice);
-	}
+	castSpell(activeSpell);
 }
 
 // Cycle through all of your collected spells
-if switchSpell and spellNumber <= global.totalSpells and global.totalSpells > 0{	
-	spellNumber += 1;
-	activeSpell = global.spellList [spellNumber];
-}
-
-if spellNumber = global.totalSpells{
-	spellNumber = 0;
-}
+if switchSpell {
+	cycleSpells();
+	}
 
 // Aim the spells
 if left{
