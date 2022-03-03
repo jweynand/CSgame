@@ -22,31 +22,13 @@ if keyboard_check(ord("R")) and (ord("B")){
 xDirection = right - left;
 yDirection = down - up;
 xVector = xDirection * xySpeed;
+x = x + xVector;
 
-	//Horizontal Collision
-if place_meeting(x + xVector,y,obj_Grass){
-	while !place_meeting(x + xVector,y,obj_Grass){
-		x = x + xDirection;
-	}
-	// Otherwise
-	xVector = 0;
-}
+scr_Collisions();
 
 // Change Speed When Sprinting
 if sprint {xySpeed = 8;}
 else {xySpeed = 4;}
-
-x = x + xVector;
-
-//Vertical Movement
-yVector = yVector + grv;
-if place_meeting(x,y + yVector,obj_Grass){
-	while !place_meeting(x,y + sign(yVector),obj_Grass){
-		y = y + sign(yVector);
-	}
-	// Otherwise
-	yVector = 0;
-}
 
 // Choose Between Gravity and Up/Down Controls
 if global.grav {y = y + yVector;}

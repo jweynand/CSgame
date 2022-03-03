@@ -6,6 +6,7 @@
     {"id":{"name":"spr_Title","path":"sprites/spr_Title/spr_Title.yy",},"order":1,},
     {"id":{"name":"obj_FireScroll","path":"objects/obj_FireScroll/obj_FireScroll.yy",},"order":0,},
     {"id":{"name":"sq_FadeIn","path":"sequences/sq_FadeIn/sq_FadeIn.yy",},"order":0,},
+    {"id":{"name":"scr_Collisions","path":"scripts/scr_Collisions/scr_Collisions.yy",},"order":6,},
     {"id":{"name":"spr_EmptyScroll","path":"sprites/spr_EmptyScroll/spr_EmptyScroll.yy",},"order":2,},
     {"id":{"name":"spr_PurpleBlob","path":"sprites/spr_PurpleBlob/spr_PurpleBlob.yy",},"order":12,},
     {"id":{"name":"spr_Grass","path":"sprites/spr_Grass/spr_Grass.yy",},"order":0,},
