@@ -17,3 +17,6 @@ if obj_Player.hp == 2 {sprite_index = spr_hp02;}
 if obj_Player.hp == 3 {sprite_index = spr_hp03;}
 if obj_Player.hp == 4 {sprite_index = spr_hp04;}
 if obj_Player.hp == 5 {sprite_index = spr_hp05;}
+
+y = 12;
+x = obj_Player.x - 680;

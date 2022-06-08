@@ -14,3 +14,6 @@ if obj_Player.switchSpell{
 		sprite_index  = spr_Ice;
 	}
 }
+
+y = 20;
+x = obj_Player.x + 5;
